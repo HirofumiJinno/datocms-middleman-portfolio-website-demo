@@ -9,3 +9,5 @@ gem 'middleman-dato'
 gem 'redcarpet'
 
 gem "webrick", "~> 1.7"
+
+gem 'bootstrap', '~> 4.2.1'
