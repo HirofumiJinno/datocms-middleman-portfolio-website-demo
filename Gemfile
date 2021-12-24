@@ -7,3 +7,5 @@ gem 'middleman-paginate'
 gem 'middleman-minify-html'
 gem 'middleman-dato'
 gem 'redcarpet'
+
+gem "webrick", "~> 1.7"
