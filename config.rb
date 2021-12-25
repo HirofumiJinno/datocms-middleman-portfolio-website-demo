@@ -36,3 +36,4 @@ dato.tap do |dato|
     proxy "/works/#{work.slug}/index.html", "/templates/work.html", locals: { work: work }
   end
 end
+  
