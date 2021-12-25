@@ -9,53 +9,14 @@
       <%= stylesheet_link_tag :all %>
     <% end %>
     <%= dato_favicon_meta_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="container__sidebar">
-        <div class="sidebar">
-          <h6 class="sidebar__title">
-            <a href="/"><%= dato.site.global_seo.site_name %></a>
-          </h6>
-
-          <div class="sidebar__intro">
-            <%= markdownify(dato.home.intro_text) %>
-          </div>
-
-          <ul class="sidebar__menu">
-            <li class="<%= current_page.path === 'index.html' ? 'is-active' : '' %>">
-              <a href="/">Home</a>
-            </li>
-            <li class="<%= current_page.path === 'about.html' ? 'is-active' : '' %>">
-              <a href="/about">About</a>
-            </li>
-          </ul>
-          <p class="sidebar__social">
-            <% dato.social_profiles.each do |profile| %>
-              <a href="<%= profile.url %>" class="social social--<%= profile.profile_type.downcase.gsub(/ +/, '-') %>"></a>
-            <% end %>
-          </p>
-          <div class="sidebar__copyright">
-            <%= dato.home.copyright %>
-          </div>
-        </div>
-      </div>
-      <div class="container__body">
-        <div class="container__mobile-header">
-          <div class="mobile-header">
-            <div class="mobile-header__menu">
-              <a href="#" data-js="toggleSidebar"></a>
-            </div>
-            <div class="mobile-header__logo">
-              <a href="/index.html">
-                <%= dato.site.global_seo.site_name %>
-              </a>
-            </div>
-          </div>
-        </div>
-        <%= yield %>
-      </div>
-    </div>
+    <%= partial 'partials/navbar' %>
+    <%= yield %>
+    <%= partial 'partials/footer' %>
     <%= javascript_include_tag "all" %>
   </body>
-</html>
+</html
