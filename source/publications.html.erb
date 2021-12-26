@@ -1,0 +1,24 @@
+<h1>A Fancy Table</h1>
+
+<div class="container">
+  <table id="publications">
+    <tr class="title-row">
+      <th>Title</th>
+      <th>Publication date</th>
+      <th>Desription</th>
+    </tr>
+    <% counter = 1 %>
+    <% dato.publications.each do |publication| %>
+      <% counter += 1 %>
+      <% if counter % 2 == 0 %>
+        <tr style="background-color: #f2f2f2;" >
+      <% elsif counter % 2 == 1 %>
+        <tr style="background-color: #ddd;" >
+      <% end %>
+          <th class="justified-text"><%= publication.title %></th>
+          <th class="text-center"><%= publication.date %></th>
+          <th class="justified-text"><%= publication.description %></th>
+      </tr>
+    <% end %>
+  </table>
+</div>
