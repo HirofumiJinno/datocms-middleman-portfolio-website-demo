@@ -5,7 +5,7 @@
         <h2 class="font-size-sub-title">Recent projects</h2>
         <div class="cards">
           <% dato.projects.first(4).each do |project| %>
-            <div class="project-card">
+            <div class="project-card" style="box-shadow: 1px 1px 1px 1px rgba(15, 15, 45, 0.2);">
               <div class="image-buffer">
                 <div class="image-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= project.image.url %>)">
                   <p><%= project.role.capitalize %></p>
@@ -13,9 +13,9 @@
               </div>
               <div class="card-description">
                 <h5 style="background:linear-gradient(transparent 70%, <%= project.color.rgb %> 0%);"><%= project.name %></h5>
+                <p style="text-align: right;"><%= project.date %></p>
                 <p><%= project.description %></p>
               </div>
-                <p style="text-align: right;"><%= project.date %></p>
             </div>
           <% end %>
         </div>
