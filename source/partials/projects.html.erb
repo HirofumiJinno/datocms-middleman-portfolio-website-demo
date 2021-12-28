@@ -4,7 +4,7 @@
       <div class="main-container" id="projects" style="margin-bottom: 0;background-color: transparent; padding-bottom: 0">
         <h2>Recent projects</h2>
         <div class="cards">
-          <% dato.projects.each do |project| %>
+          <% dato.projects.first(4).each do |project| %>
             <div class="project-card">
               <div class="image-buffer">
                 <div class="image-container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= project.image.url %>)">
