@@ -6,6 +6,7 @@ ignore /stylesheets.*/
 
 activate :directory_indexes
 activate :dato
+activate :i18n, langs: [:en, :ja-JP]
 activate :pagination
 
 activate :external_pipeline,
