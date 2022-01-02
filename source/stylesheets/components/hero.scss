@@ -1,33 +1,35 @@
-.banner {
+.banner-box {
   background-size: cover;
   background-position: center;
   padding: 100px 0;
   display: flex;
 }
 
-.banner h1 {
+.hero-header {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
 }
 
-.banner p {
+.hero-copy {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin: 0px;
 }
 
 .text-container{
   justify-content: flex-start;
   margin-left: 2.5%;
-  min-width: 350px;
-  max-width: 450px;
+  min-width: 450px;
+  max-width: 550px;
   padding: 10px;
 }
 
-.text-container p {
-  padding: 10px 0px;
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
