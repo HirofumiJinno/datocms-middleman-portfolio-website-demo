@@ -1,4 +1,12 @@
-<p>
-<%= current_page.url %>
-<%= current_page.path %>
-</p>
+<p><%= current_page.url %></p>
+<p><%= current_page.path %></p>
+<p><%= I18n.available_locales.join('|') %></p>
+<p><%= current_page.path.slice(/ja/) %></p>
+<p><%= I18n.available_locales.join('|').slice(/ja/) %></p>
+<p><%= "ja".slice(/ja/) %></p>
+
+<% if current_page.path.slice(/ja/) == "ja" %>
+  <p><%= link_to("link", 'index.html') %></p>
+<% else %>
+  <p><%= link_to("link", 'index.html') %></p>
+<% end %>
