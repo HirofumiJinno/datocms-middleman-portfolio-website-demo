@@ -9,22 +9,29 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", "index", class: "nav-link" %>
+        <%= link_to "#{dato.subtitle.home}", "index", class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "What's new", "#", class: "nav-link" %>
+        <%= link_to "#{dato.subtitle.recent_projects}", "#", class: "nav-link" %>
       </li>
       <li class="nav-item active">
         <%= link_to "About", "#", class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Testimonials", "testimonials", class: "nav-link" %>
+        <%= link_to "#{dato.subtitle.testimonials}", "testimonials.html", class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Publications & talks", "publications", class: "nav-link" %>
+        <%= link_to "#{dato.subtitle.publications_talks}", "publications.html", class: "nav-link" %>
       </li>
       <li class="nav-item active">
-        <%= link_to "Contact", "#", class: "nav-link" %>
+        <%= link_to "#{dato.subtitle.contact}", "index.html#contact-form-inquiry", class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <% if current_page.path.slice(/ja/) == "ja" %>
+          <%= link_to "English", "..", class: "nav-link" %>
+        <% else %>
+          <%= link_to "日本語", "ja/index.html", class: "nav-link" %>
+        <% end %>
       </li>
       <li class="nav-item dropdown">
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
