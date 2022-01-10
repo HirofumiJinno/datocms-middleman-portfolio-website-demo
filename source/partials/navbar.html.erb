@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-md navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <% link_to 'index' do %>
     <%= image_tag "assets/images/twitter_header_photo_1.png", id: "brand-icon" %>
   <% end %>
@@ -28,7 +28,7 @@
       </li>
       <li class="nav-item active">
         <% if current_page.path.slice(/ja/) == "ja" %>
-          <%= link_to "English", "..", class: "nav-link" %>
+          <%= link_to "English", "/../../index.html", class: "nav-link" %>
         <% else %>
           <%= link_to "日本語", "ja/index.html", class: "nav-link" %>
         <% end %>
