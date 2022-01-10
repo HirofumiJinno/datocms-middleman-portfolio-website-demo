@@ -4,6 +4,8 @@
 <p><%= current_page.path.slice(/ja/) %></p>
 <p><%= I18n.available_locales.join('|').slice(/ja/) %></p>
 <p><%= "ja".slice(/ja/) %></p>
+<p><%= I18n.locale %></p>
+<p><%= I18n.locale.to_s %></p>
 
 <% if current_page.path.slice(/ja/) == "ja" %>
   <p><%= link_to("link", 'index.html') %></p>
