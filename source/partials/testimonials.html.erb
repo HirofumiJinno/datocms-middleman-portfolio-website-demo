@@ -2,7 +2,7 @@
   <div class="row white-backfround">
     <div class="col-12">
       <div class="testimonial-card-container">
-        <% dato.testimonials.each do |testimonial| %>
+        <% dato.testimonials.first(2).each do |testimonial| %>
           <div class="testimonial-card" style="background-image: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(<%= testimonial.background_image.url %>); border: 16px <%= testimonial.border_color.rgb %>; border-style: solid none;">
             <div class="testimonial">
               <% if current_page.path.slice(/ja/) == "ja" %>
