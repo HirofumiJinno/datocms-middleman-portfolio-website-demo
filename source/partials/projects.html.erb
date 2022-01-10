@@ -13,7 +13,12 @@
               </div>
               <div class="card-description">
                 <h5 style="background:linear-gradient(transparent 70%, <%= project.color.rgb %> 0%);"><%= project.name %></h5>
-                <p style="text-align: right;"><%= project.date %></p>
+                <% if current_page.path.slice(/ja/) == "ja" %>
+                    <% display_date = project.date.strftime("%Y年%m月%d日") %>
+                <% else %>
+                    <% display_date = project.date.strftime("%B %d, %Y") %>
+                <% end %>
+                <p style="text-align: right;"><%= display_date %></p>
                 <p><%= project.description %></p>
               </div>
             </div>
